@@ -77,9 +77,9 @@ def analysis(file = 'boundsAnalysis.txt'):
     bounds = []
     nums = []
     for x in range(3):
-        bounds.append(data.readline())
+        bounds.append(data.readline(5_000_000))
     for y in range(5):
-        nums.append(data.readline())
+        nums.append(data.readline(5_000_000))
     return render_template('analysis.html', avgList = nums,
                            bounds = bounds)
  
