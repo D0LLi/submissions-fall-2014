@@ -37,16 +37,16 @@ def main():
         two=2
         if 'Iran' in elements:
             Dict['one'].append('Iranian constitution')
-            a=open('Iran.txt')
-            iran=a.read()
+            with open('Iran.txt') as a:
+                iran=a.read()
             iran=iran.lower()
             iran=iran.split()
             Dict['one'].append(iran)
 
             checked+=1
         if 'USA' in elements:
-            b=open('unitedstates.txt')
-            usaw=b.read()
+            with open('unitedstates.txt') as b:
+                usaw=b.read()
             usaw=usaw.lower()
             usaw=usaw.split()
             checked+=1
@@ -58,8 +58,8 @@ def main():
                 Dict['two'].append(usaw)
 
         if '1791' in elements:
-            c=open('1791France.txt')
-            revolution=c.read()
+            with open('1791France.txt') as c:
+                revolution=c.read()
             revolution=revolution.lower()
             revolution=revolution.split()
             checked+=1
@@ -71,8 +71,8 @@ def main():
                 Dict['two'].append(revolution)
 
         if 'Russia' in elements:
-            d=open('russia.txt')
-            rus=d.read()
+            with open('russia.txt') as d:
+                rus=d.read()
             rus=rus.lower()
             rus=rus.split()
             checked+=1
@@ -84,8 +84,8 @@ def main():
                 Dict['two'].append(rus)
 
         if 'USSR' in elements:
-            e=open('USSR.txt')
-            ussr=e.read()
+            with open('USSR.txt') as e:
+                ussr=e.read()
             ussr=ussr.lower()
             ussr=ussr.split()
             checked+=1
@@ -97,8 +97,8 @@ def main():
                 Dict['two'].append(ussr)
 
         if 'France' in elements:
-            f=open('France.txt')
-            france=f.read()
+            with open('France.txt') as f:
+                france=f.read()
             france=france.lower()
             france=france.split()
             checked+=1
@@ -110,8 +110,8 @@ def main():
                 Dict['two'].append(france)
 
         if 'Manifesto' in elements:
-            g=open('manifesto.txt')
-            manifesto=g.read()
+            with open('manifesto.txt') as g:
+                manifesto=g.read()
             manifesto=manifesto.lower()
             manifesto=manifesto.split()
             checked+=1
@@ -123,8 +123,8 @@ def main():
                 Dict['two'].append(manifesto)
 
         if 'Magna' in elements:
-            h=open('Magnacarta.txt')
-            magna=h.read()
+            with open('Magnacarta.txt') as h:
+                magna=h.read()
             magna=magna.lower()
             magna=magna.split()
             checked+=1

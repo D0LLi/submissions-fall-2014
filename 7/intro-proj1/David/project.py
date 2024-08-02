@@ -3,9 +3,9 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 def tabledata():
-    f = open('wastecollection.csv', 'r')
-    s = f.readlines()
-    f.close
+    with open('wastecollection.csv', 'r') as f:
+        s = f.readlines()
+        f.close
     finals = []
     i = 0
     while i < len(s):

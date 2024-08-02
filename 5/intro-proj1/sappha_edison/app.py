@@ -6,8 +6,8 @@ app = Flask (__name__)
 
 @app.route ("/",methods=["GET","POST"])
 def home ():
-    data = open ("pokemon2.csv", "r")
-    categories = data.read().splitlines()
+    with open ("pokemon2.csv", "r") as data:
+        categories = data.read().splitlines()
     pokelist=[]
     results=[]
     for each in categories:
