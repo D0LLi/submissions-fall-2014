@@ -38,9 +38,9 @@ def Compare():
                 s2='NY'
                 if(s1==s2):
                         s2='NJ'
-        f=open('static/Data.txt','r')
-        s = f.readlines()
-        f.close
+        with open('static/Data.txt','r') as f:
+        	s = f.readlines()
+        	f.close
         i = 0
         while i < len(s):
                 s[i]=s[i].split(',')

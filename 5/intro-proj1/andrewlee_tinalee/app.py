@@ -20,8 +20,8 @@ def home():
 
 @app.route("/avg")
 def avg():
-    x = open('pokemonAverages.csv')
-    readFile = x.readlines()
+    with open('pokemonAverages.csv') as x:
+        readFile = x.readlines()
     firstLine = readFile[0].split(",")
     water = readFile[1].split(",")
     fire = readFile[2].split(",")
@@ -39,8 +39,8 @@ def index():
 
     
 def tablefy(fileName,color):
-    x = open(fileName)
-    readFile = x.readlines()
+    with open(fileName) as x:
+        readFile = x.readlines()
     tableHtml = '<table border = "1" bgcolor =' + color + '>'
     firstLine = readFile[0].split(",")
     for column in firstLine:

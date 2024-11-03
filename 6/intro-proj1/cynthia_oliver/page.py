@@ -15,9 +15,9 @@ def htmlify(s):
     return x
 
 def getStats(filename):
-    x = open(filename)
-    y = x.readlines()
-    x.close
+    with open(filename) as x:
+        y = x.readlines()
+        x.close
     i = 0
     while i < len(y):
         y[i] = y[i].strip()
@@ -25,9 +25,9 @@ def getStats(filename):
     return y[1:]
 
 def getstatheaders(filename):
-    x = open(filename)
-    y = x.readlines()
-    x.close
+    with open(filename) as x:
+        y = x.readlines()
+        x.close
     i = 0
     while i < len(y):
         y[i] = y[i].strip()

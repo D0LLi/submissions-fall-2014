@@ -1,9 +1,8 @@
 from flask import Flask,render_template,request
 
 app = Flask(__name__)
-
-data = open('pokemon.csv', 'r')
-data = data.readlines()
+with open('pokemon.csv', 'r') as data:
+    data = data.readlines()
 
 
 @app.route('/')

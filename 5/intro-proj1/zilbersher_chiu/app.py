@@ -20,8 +20,8 @@ def formulate():
                "louisiana_purchase":"Louisiana Purchase",
                "zimmerman_telegram":"Zimmerman Telegram"}
     title=titleDict[info]
-    f = open("./static/" + info + ".txt", "r")
-    raw_string = f.read()
+    with open("./static/" + info + ".txt", "r") as f:
+        raw_string = f.read()
     word_dict = wordCount(raw_string)
     word = mostCommonWord(word_dict)
     return render_template("count.html", title=title, word=word, word_dict=word_dict)
