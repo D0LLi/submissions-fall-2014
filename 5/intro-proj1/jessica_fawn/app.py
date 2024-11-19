@@ -32,8 +32,8 @@ def home () :
 #     return render_template("data.html", nav = nav)%s
 def table():
 	data = open ("Lincoln_Square_BID_Business_List.csv", "r")
-	headers = data.readline().split(',')
-	data.readline()
+	headers = data.readline(5_000_000).split(',')
+	data.readline(5_000_000)
 	rows = []
 	for line in data:
 		rows.append(line.split(','))
