@@ -1,4 +1,5 @@
 from flask import Flask,render_template,request 
+import secrets
 
 app = Flask(__name__)
 
@@ -12,8 +13,7 @@ images=["static/img/chick.jpeg",
 
 @app.route("/")
 def home():
-    import random
-    num = random.randrange(0,4)
+    num = secrets.SystemRandom().randrange(0,4)
     rankBy = request.args.get("rankBy",None)
     button = request.args.get("b",None)
     state = request.args.get("state",None)
